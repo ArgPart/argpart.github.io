@@ -250,6 +250,8 @@ img { max-width: 100%; height: auto; display: block; }
   width: auto;
 }
 
+.univ-logos img.logo-leiden { height: 72px; }
+
 .univ-logos a { display: inline-block; }
 
 /* ---------- sections ---------- */
@@ -268,7 +270,6 @@ section#dates { padding-top: var(--space-section); }
 
 .dates-table {
   width: 100%;
-  max-width: 640px;
   border-collapse: collapse;
   font-family: var(--font-head);
   font-size: 0.95rem;
@@ -291,6 +292,12 @@ section#dates { padding-top: var(--space-section); }
 }
 
 .dates-table tbody tr:hover { background: var(--bg-alt); }
+
+.dates-table td:first-child,
+.dates-table th:first-child {
+  width: 1%;
+  white-space: nowrap;
+}
 
 .dates-table .dates-final td {
   font-weight: 700;
@@ -455,6 +462,30 @@ section#dates { padding-top: var(--space-section); }
   margin-bottom: 0.7em;
 }
 
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  font-size: 0.88em;
+  background: var(--bg-alt);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+.code-block {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue);
+  padding: 0.9rem 1.1rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.code-block code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
 /* ---------- references ---------- */
 
 .references {
@@ -483,7 +514,16 @@ section#dates { padding-top: var(--space-section); }
   flex-wrap: wrap;
 }
 
-.footer-brand img { height: 56px; width: auto; }
+.footer-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.75rem;
+}
+
+.footer-logos a { display: inline-block; }
+.footer-logos img { height: 30px; width: auto; }
+.footer-logos img.logo-leiden { height: 56px; }
 
 .footer-note {
   font-size: 0.85rem;

@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Photo placeholder">
-  <clipPath id="c"><circle cx="80" cy="80" r="80"/></clipPath>
-  <circle cx="80" cy="80" r="80" fill="#E8EAF3"/>
-  <g clip-path="url(#c)">
-    <circle cx="80" cy="63" r="27" fill="#001158" opacity="0.5"/>
-    <path d="M24 142c8-30 29-45 56-45s48 15 56 45v24H24z" fill="#001158" opacity="0.5"/>
-  </g>
-</svg>

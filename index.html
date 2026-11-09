@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PART: Parameterized Argumentative Reasoning Task — ArgMining 2027 Shared Task</title>
 <meta name="description" content="ArgMining 2027 shared task (EACL 2027): teams solve reasoning puzzles over synthetic witness testimony generated from formal argumentation attack graphs.">
-<!-- PLACEHOLDER: update this canonical URL (and og:url, JSON-LD, sitemap) once the hosting domain is final -->
 <link rel="canonical" href="https://argpart.github.io/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#001158">
@@ -34,11 +33,12 @@
   "description": "Shared task on reasoning puzzles about witness testimony. Given a synthetic case text generated from a formal argumentation (attack) graph, teams predict which statements or witnesses can be believed. Held at the ArgMining 2027 workshop, EACL 2027.",
   "url": "https://argpart.github.io/",
   "image": "https://argpart.github.io/assets/logo-universiteit-leiden-international.png",
-  "startDate": "2026-11-06",
+  "startDate": "2026-11-09",
   "endDate": "2027-03-14",
   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
   "location": { "@type": "Place", "name": "ArgMining 2027 workshop at EACL 2027, Greece", "url": "https://2027.eacl.org/" },
   "organizer": [
+    { "@type": "Organization", "name": "PART shared task organizers", "email": "argpart2027@gmail.com", "url": "https://argpart.github.io/#organizers" },
     { "@type": "Organization", "name": "Utrecht University", "url": "https://www.uu.nl/en" },
     { "@type": "Organization", "name": "Leiden University", "url": "https://www.universiteitleiden.nl/" },
     { "@type": "Organization", "name": "Rijksuniversiteit Groningen", "url": "https://www.rug.nl/en" },
@@ -64,6 +64,7 @@
       <a href="#task">Task</a>
       <a href="#example">Example</a>
       <a href="#dataset">Dataset</a>
+      <a href="#submission">Submit</a>
       <a href="#evaluation">Evaluation</a>
       <a href="#organizers">Organizers</a>
     </nav>
@@ -78,27 +79,30 @@
       <p class="kicker">ArgMining 2027 &middot; Shared Task &middot; Workshop at <a href="https://2027.eacl.org/" rel="noopener">EACL 2027</a>, Greece</p>
       <h1>Parameterized Argumentative Reasoning Task <span class="abbrev">(PART)</span></h1>
       <p class="lede">
-        Reasoning powers modern language, but its effects on performance prove to be brittle and opaque, which prohibits them from being responsibly applied in law and evidential reasoning. In this shared task, teams solve
+        Reasoning drives much of the recent progress in language models, but its effects on performance are brittle and opaque, which stands in the way of applying these models responsibly in law and evidential reasoning. In this shared task, teams solve
         <strong>reasoning puzzles about witness testimony</strong>. Each puzzle is a synthetic case text generated from a formal <em>argumentation attack graph</em> &mdash; certain testimonies attack others, rendering them
-        &ldquo;unbelievable&rdquo;. The model must recover the underlying attack graph from the natural language and decide what can be believed.
+        &ldquo;unbelievable.&rdquo; The model must decide what can be believed.
       </p>
       <div class="cta-row">
-        <!-- PLACEHOLDER: replace href with the Hugging Face repo URLs once released -->
-        <a class="btn btn-primary" href="https://huggingface.co/" rel="noopener">
+        <a class="btn btn-primary" href="https://huggingface.co/datasets/michiel/argpart" rel="noopener">
           <span class="btn-label">Training data <small>Hugging Face &middot; 3,000 samples</small></span>
-          <span class="btn-badge">Coming soon</span>
+          <span class="btn-badge">Available now</span>
         </a>
-        <!-- PLACEHOLDER: replace href with the Hugging Face repo URL once released -->
-        <a class="btn btn-outline" href="https://huggingface.co/" rel="noopener">
+        <!-- On Dec 7, 2026: point this back to https://huggingface.co/datasets/michiel/argpart and set the badge to "Available now" -->
+        <a class="btn btn-outline" href="#dates">
           <span class="btn-label">Test data <small>Hugging Face &middot; 1,000 samples</small></span>
           <span class="btn-badge">Dec 7, 2026</span>
+        </a>
+        <a class="btn btn-outline" href="#submission">
+          <span class="btn-label">How to submit <small>Email &middot; JSONL predictions</small></span>
+          <span class="btn-badge">Due Dec 11, 2026</span>
         </a>
       </div>
       <div class="univ">
         <p class="univ-label">Organized by</p>
         <div class="univ-logos">
           <a href="https://www.universiteitleiden.nl/" target="_blank">
-            <img src="assets/logo-universiteit-leiden-international.svg" alt="Universiteit Leiden - The Netherlands">
+            <img class="logo-leiden" src="assets/logo-universiteit-leiden-international.svg" alt="Universiteit Leiden - The Netherlands">
           </a>
           <a href="https://www.uu.nl/en" target="_blank">
             <img src="assets/uu-logo.svg" alt="Utrecht University" width="148" height="40" loading="lazy" decoding="async">
@@ -119,16 +123,16 @@
     <div class="wrap">
       <h2>Dates</h2>
       <table class="dates-table">
-        <caption class="visually-hidden">Proposed timeline for the PART shared task</caption>
+        <caption class="visually-hidden">Timeline for the PART shared task</caption>
         <thead>
           <tr><th scope="col">Date</th><th scope="col">Event</th></tr>
         </thead>
         <tbody>
-          <tr><td scope="row">Nov 9, 2026</td><td>Shared Task launch</td></tr>
+          <tr><td scope="row">Nov 9, 2026</td><td>Shared Task launch, <a href="https://huggingface.co/datasets/michiel/argpart" rel="noopener">training data</a> release</td></tr>
           <tr><td scope="row">Dec 7, 2026</td><td>Test data release</td></tr>
-          <tr><td scope="row">Dec 11, 2026</td><td>Submission closes</td></tr>
+          <tr><td scope="row">Dec 11, 2026</td><td>Submission closes, 23:59 AoE (email predictions to <a href="mailto:argpart2027@gmail.com?subject=%5BPART2027%20SUBMISSION%5D%20">argpart2027@gmail.com</a>; see <a href="#submission">how to submit</a>)</td></tr>
           <tr><td scope="row">Dec 15, 2026</td><td>Results announcement</td></tr>
-          <tr><td scope="row">Dec 31, 2026</td><td>Paper submission due</td></tr>
+          <tr><td scope="row">Dec 31, 2026</td><td>System description paper due (<a href="#papers">OpenReview, 4 pages</a>)</td></tr>
           <tr><td scope="row">Jan 15, 2027</td><td>Camera-ready version due</td></tr>
           <tr class="dates-final"><td scope="row">Mar 9&ndash;14, 2027</td><td>Workshop at <a href="https://2027.eacl.org/" rel="noopener">EACL 2027</a>, Greece</td></tr>
         </tbody>
@@ -168,14 +172,14 @@
             Determine the believability of a specific statement that was
             mentioned in the case text.
           </p>
-          <p class="io"><strong>Input:</strong> case text + statement&ensp;&middot;&ensp;<strong>Output:</strong> yes or no</p>
+          <p class="io"><strong>Input:</strong> the binary prompt as given in the dataset (<code>binary_prompt</code>)&ensp;&middot;&ensp;<strong>Output:</strong> yes or no</p>
         </div>
         <div class="subtask-card">
           <h4>Task 2 &middot; Multi-label prediction</h4>
           <p>
             Determine which witnesses mentioned in the case can be believed.
           </p>
-          <p class="io"><strong>Input:</strong> case text&ensp;&middot;&ensp;<strong>Output:</strong> list of names of believable witnesses</p>
+          <p class="io"><strong>Input:</strong> the multi-label prompt as given in the dataset (<code>multi_label_prompt</code>)&ensp;&middot;&ensp;<strong>Output:</strong> list of names of believable witnesses</p>
         </div>
       </div>
     </div>
@@ -187,8 +191,11 @@
       <h2>Example puzzle</h2>
       <p>
         An illustrative reasoning puzzle based on a non-linear attack graph with
-        four arguments (Steging et&nbsp;al., 2026a). The model sees only the
+        four arguments (Steging et&nbsp;al., 2025). The model sees only the
         natural language; it must reason over the hidden attack structure.
+        The prompt shown is for the <strong>binary task</strong> (Task&nbsp;1); the
+        multi-label prompt describes the same case but asks which witnesses can be
+        believed.
       </p>
       <figure class="example">
         <div class="example-fig">
@@ -202,7 +209,7 @@
             </defs>
             <!-- edges -->
             <path class="edge" d="M 192 70 L 110 70" marker-end="url(#arrow)"/>
-            <path class="edge" d="M 332 84 Q 220 150 110 84" marker-end="url(#arrow)"/>
+            <path class="edge" d="M 332 56 Q 220 -10 110 56" marker-end="url(#arrow)"/>
             <path class="edge" d="M 472 70 L 390 70" marker-end="url(#arrow)"/>
             <!-- nodes -->
             <g class="node">
@@ -234,17 +241,29 @@
         </div>
         <div class="example-text">
           <blockquote>
-            <p>The following is a reasoning puzzle. Witnesses should be believed unless there is testimony that they are lying. Now consider the following facts:</p>
-            <p>Witness <strong>Alice</strong> says that the train is late.</p>
-            <p>Witness <strong>Bob</strong> says that witness Alice is lying.</p>
-            <p>Witness <strong>Charlie</strong> says that witness Alice is lying.</p>
-            <p>Witness <strong>Dan</strong> says that witness Charlie is lying.</p>
-            <p>Question: should it be believed that the train is late?</p>
-            <p>End your answer with: &ldquo;Answer: yes or no&rdquo;.</p>
+            <p>The following is a reasoning puzzle. Witnesses should always be believed unless there is believable testimony that they are lying. Now consider the following facts:</p>
+            <p>Witness <strong>Alice</strong> says that the train is late<br>
+            Witness <strong>Bob</strong> says that Alice is lying<br>
+            Witness <strong>Charlie</strong> says that Alice is lying<br>
+            Witness <strong>Dan</strong> says that Charlie is lying</p>
+            <p>Final question: can we believe that the train is late?<br>
+            End your answer with: &ldquo;Answer: yes or no&rdquo;.</p>
           </blockquote>
           <figcaption class="fig-caption">(b) Natural-language puzzle (binary task)</figcaption>
         </div>
       </figure>
+      <div class="example-solution">
+        <h3>Solution</h3>
+        <p>
+          Nobody accuses Bob or Dan, so both are believed. Dan&rsquo;s testimony
+          makes Charlie unbelievable, but Bob&rsquo;s testimony still makes Alice
+          unbelievable.
+        </p>
+        <ul class="restrictions">
+          <li><strong>Task 1 (binary):</strong> <code>"no"</code>: the train being late cannot be believed.</li>
+          <li><strong>Task 2 (multi-label):</strong> <code>["Bob", "Dan"]</code></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -254,9 +273,20 @@
       <h2>Dataset</h2>
       <p>
         The dataset is based on the dynamic benchmarks introduced in
-        Steging et&nbsp;al. (2026a). Each instance contains two prompts: a
-        binary prompt and a multi-label prompt, each describing the case text
-        and task instructions. We release training and test data for both tasks.
+        Steging et&nbsp;al. (2025) and is available on
+        <a href="https://huggingface.co/datasets/michiel/argpart" rel="noopener">Hugging Face</a>.
+        Each item has an <code>id</code>, a list of all <code>witnesses</code>, and two
+        prompts describing the same case: <code>binary_prompt</code> and
+        <code>multi_label_prompt</code> (testimonies may appear in a different order).
+        Training items also include the answers (<code>binary</code> and
+        <code>multi_label</code>); for test items these are withheld.
+      </p>
+      <p>
+        Every prompt states the rule that decides the answer: <em>witnesses should
+        always be believed unless there is believable testimony that they are
+        lying</em> (or another attack word, such as &ldquo;not reliable&rdquo;).
+        The attack graphs are chains and star-shaped trees, so they contain no
+        cycles, and this rule gives exactly one correct answer for every puzzle.
       </p>
       <p>
         Puzzles vary in complexity, expressed primarily by the number of nodes
@@ -287,16 +317,57 @@
         </div>
         <div class="fact">
           <span class="fact-num">3</span>
-          <span class="fact-label">max submissions per subtask</span>
+          <span class="fact-label">max runs per subtask</span>
         </div>
       </div>
       <h3>Modeling restrictions</h3>
       <ul class="restrictions">
-        <li>Models are restricted to <strong>open-source models with a total of 8B parameters or less</strong>. Intermediate steps may use larger models, for instance for distillation.</li>
+        <li>Models are restricted to <strong>open-weight models with a total of 8B parameters or less</strong>. Intermediate steps may use larger open-weight models, for instance for distillation.</li>
         <li>Mixture-of-experts models count as the <strong>total</strong> parameter count; ensembles of several models count as the <strong>sum</strong> of their weights.</li>
         <li>Teams may use any training data, models, and frameworks, provided the model weights can be released under a license with unrestricted non-commercial use (e.g. Apache, MIT, CC-BY).</li>
-        <li>The use of <strong>closed commercial APIs is prohibited</strong></li>
-        <li>Per subtask, teams may submit a <strong>maximum of three runs</strong>.</li>
+        <li>The use of <strong>closed commercial APIs is prohibited</strong> at every stage, including intermediate steps such as distillation or data generation.</li>
+        <li>Per subtask, teams may submit a <strong>maximum of three runs</strong> (see <a href="#submission">how to submit</a>).</li>
+      </ul>
+      <h3 id="submission">How to submit</h3>
+      <p>
+        Submissions are made <strong>by email</strong>: send your predictions to
+        <a href="mailto:argpart2027@gmail.com?subject=%5BPART2027%20SUBMISSION%5D%20"><strong>argpart2027@gmail.com</strong></a>
+        before the submission deadline (<strong>Dec 11, 2026, 23:59 AoE</strong>), using this
+        <strong>exact subject line</strong> so it is not missed:
+      </p>
+<pre class="code-block"><code>[PART2027 SUBMISSION] &lt;team name&gt; - run &lt;n&gt;</code></pre>
+      <p>
+        For example, <code>[PART2027 SUBMISSION] Team Owl - run 1</code>. Attach one
+        JSONL file per run, named <code>&lt;team&gt;_&lt;run&gt;.jsonl</code> (for example
+        <code>owl_1.jsonl</code>). You may send each run in its own email or several
+        runs in one email; in the latter case, list all run numbers in the subject,
+        e.g. <code>[PART2027 SUBMISSION] Team Owl - runs 1, 2, 3</code>.
+      </p>
+      <p>
+        Number your runs in <strong>one sequence per team</strong> (1, 2, 3, &hellip;),
+        regardless of subtask. The fields in each file decide which subtask(s) the run
+        counts toward, up to three runs per subtask. If you resend a run, the last
+        version received before the deadline counts.
+      </p>
+      <p>
+        For questions, email the same address with the subject
+        <code>[PART2027 QUESTION] &lt;short topic&gt;</code>.
+      </p>
+      <h4>Submission file format</h4>
+      <p>
+        Each run is a single <a href="https://jsonlines.org/" rel="noopener">JSON Lines</a>
+        file (<code>.jsonl</code>, UTF-8), with one JSON object per line and one line
+        per test item:
+      </p>
+<pre class="code-block"><code>{"id": "test-0001", "binary": "no", "multi_label": ["Melody"]}
+{"id": "test-0002", "binary": "yes", "multi_label": ["Arwen", "Miles"]}
+{"id": "test-0003", "binary": "no", "multi_label": []}</code></pre>
+      <ul class="restrictions">
+        <li><code>id</code>: the item id, copied exactly from the test file.</li>
+        <li><code>binary</code> (Task 1): your answer to the binary prompt, either <code>"yes"</code> or <code>"no"</code>.</li>
+        <li><code>multi_label</code> (Task 2): a list of the names of all witnesses who can be believed, spelled as in the prompt. Order and capitalization do not matter.</li>
+        <li>If you only take part in one subtask, leave the other field out. If a file contains both fields, it counts as one run for each subtask.</li>
+        <li>Include every test item. A missing answer counts as wrong, and a file with unknown or duplicate ids is rejected.</li>
       </ul>
     </div>
   </section>
@@ -308,18 +379,27 @@
       <div class="eval-grid">
         <div class="eval-card">
           <h3>Task 1 &middot; Binary</h3>
-          <p><strong>Primary:</strong> F1 score on classification performance.</p>
-          <p><strong>Also reported:</strong> the underlying precision and recall scores in the final analysis.</p>
+          <p><strong>Primary:</strong> macro-F1 over the <code>yes</code> and <code>no</code> classes.</p>
+          <p><strong>Also reported:</strong> accuracy.</p>
         </div>
         <div class="eval-card">
           <h3>Task 2 &middot; Multi-label</h3>
           <p><strong>Primary:</strong> strict accuracy &mdash; the predicted list of believable witnesses must match the ground-truth list exactly (order is not taken into account).</p>
-          <p><strong>Secondary:</strong> micro F1 on the number of correctly classified witnesses.</p>
+          <p><strong>Secondary:</strong> F1 between the predicted and ground-truth witness lists, averaged over items.</p>
         </div>
       </div>
       <p>
-        Evaluation is run <strong>offline</strong>. Alongside the evaluation of the
+        Evaluation is run <strong>offline</strong> on the predictions teams
+        <a href="#submission">email to argpart2027@gmail.com</a>. Alongside the evaluation of the
         teams, the organizers will also run simplistic baselines.
+      </p>
+      <h3 id="papers">System description papers</h3>
+      <p>
+        Teams are expected to describe their system in a paper of up to
+        <strong>4 pages</strong> (excluding references) in the
+        <a href="https://github.com/acl-org/acl-style-files" rel="noopener">ACL style</a>,
+        submitted via <strong>OpenReview</strong> by <strong>Dec 31, 2026</strong>.
+        Teams receive the submission instructions after submitting their runs.
       </p>
     </div>
   </section>
@@ -328,6 +408,7 @@
   <section id="organizers">
     <div class="wrap">
       <h2>Organizers</h2>
+      <p>Send questions to <a href="mailto:argpart2027@gmail.com?subject=%5BPART2027%20QUESTION%5D%20">argpart2027@gmail.com</a> with the subject <code>[PART2027 QUESTION] &lt;short topic&gt;</code>. For submissions, see <a href="#submission">How to submit</a>.</p>
       <div class="organizer-grid">
         <div class="organizer">
           <!-- PLACEHOLDER photo: replace assets/org-steging.svg with the real photo (JPG/PNG) -->
@@ -336,8 +417,7 @@
           <p class="meta">Postdoctoral Researcher, Utrecht University, the Netherlands &middot; <a href="mailto:c.c.steging@uu.nl">c.c.steging@uu.nl</a></p>
         </div>
         <div class="organizer">
-          <!-- PLACEHOLDER photo: replace assets/org-van-der-meer.svg with the real photo (JPG/PNG) -->
-          <img class="avatar" src="assets/org-van-der-meer.svg" alt="Michiel T. van der Meer (photo to be added)" width="160" height="160" loading="lazy" decoding="async">
+          <img class="avatar" src="assets/vandermeer.jpg" alt="Michiel T. van der Meer" width="160" height="160" loading="lazy" decoding="async">
           <h3>Michiel T. van der Meer</h3>
           <p class="meta">Postdoctoral Researcher, Leiden University, the Netherlands &middot; <a href="mailto:m.t.van.der.meer@liacs.leidenuniv.nl">m.t.van.der.meer@liacs.leidenuniv.nl</a></p>
         </div>
@@ -363,7 +443,7 @@
       <h2>References</h2>
       <ol class="references">
         <li>
-          Cor Steging, Silja Renooij, and Bart Verheij. 2026a.
+          Cor Steging, Silja Renooij, and Bart Verheij. 2025.
           <em>Parameterized argumentation-based reasoning tasks for benchmarking generative language models.</em>
           In <em>Proceedings of the Twentieth International Conference on Artificial Intelligence and Law, ICAIL &rsquo;25</em>,
           pages 455&ndash;459, New York, NY, USA. Association for Computing Machinery.
@@ -376,11 +456,17 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <img src="assets/logo-universiteit-leiden-international.svg" alt="Universiteit Leiden — The Netherlands" width="142" height="80" loading="lazy" decoding="async">
+      <div class="footer-logos">
+        <a href="https://www.universiteitleiden.nl/" target="_blank" rel="noopener"><img class="logo-leiden" src="assets/logo-universiteit-leiden-international.svg" alt="Universiteit Leiden — The Netherlands" width="142" height="80" loading="lazy" decoding="async"></a>
+        <a href="https://www.uu.nl/en" target="_blank" rel="noopener"><img src="assets/uu-logo.svg" alt="Utrecht University" width="148" height="40" loading="lazy" decoding="async"></a>
+        <a href="https://www.rug.nl/en" target="_blank" rel="noopener"><img src="assets/rug-logo.svg" alt="Rijksuniversiteit Groningen" width="169" height="40" loading="lazy" decoding="async"></a>
+        <a href="https://www.tudelft.nl/" target="_blank" rel="noopener"><img src="assets/tudelft-logo.svg" alt="TU Delft" width="103" height="40" loading="lazy" decoding="async"></a>
+      </div>
       <p class="footer-note">
-        PART shared task, ArgMining 2027 &middot; data releases on Hugging Face
-        (links above activate on release) &middot; questions:
-        <a href="mailto:m.t.van.der.meer@liacs.leidenuniv.nl">m.t.van.der.meer@liacs.leidenuniv.nl</a>
+        PART shared task, ArgMining 2027 &middot; data on <a href="https://huggingface.co/datasets/michiel/argpart" rel="noopener">Hugging Face</a>
+        &middot; submissions &amp; questions:
+        <a href="mailto:argpart2027@gmail.com">argpart2027@gmail.com</a>
+        (see <a href="#submission">subject lines</a>)
       </p>
     </div>
     <nav class="footer-nav" aria-label="Footer">
@@ -388,6 +474,7 @@
       <a href="#task">Task</a>
       <a href="#example">Example</a>
       <a href="#dataset">Dataset</a>
+      <a href="#submission">Submit</a>
       <a href="#evaluation">Evaluation</a>
       <a href="#organizers">Organizers</a>
       <a href="#references">References</a>

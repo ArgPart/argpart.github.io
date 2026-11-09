@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# PLACEHOLDER: update the sitemap path once the hosting domain is final
 Sitemap: https://argpart.github.io/sitemap.xml
