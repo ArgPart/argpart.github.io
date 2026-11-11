@@ -354,6 +354,7 @@ section#dates { padding-top: var(--space-section); }
   height: 88px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
   margin-bottom: 1rem;
 }
 
