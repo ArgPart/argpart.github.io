@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="242" height="70" viewBox="0 0 242 70" role="img" aria-labelledby="title desc">
+  <title id="title">PART</title>
+  <desc id="desc">Argumentation Puzzles: three connected arguments with directed attack arrows.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0L6 3L0 6Z" fill="#BE4500"/>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke="#BE4500" stroke-width="2.6" stroke-linecap="round" marker-end="url(#arrow)">
+    <path d="M29 18L42 25"/>
+    <path d="M45 40L28 49"/>
+    <path d="M19 43L19 25"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#001158" stroke-width="3">
+    <circle cx="19" cy="13" r="10"/>
+    <circle cx="53" cy="30" r="10"/>
+    <circle cx="19" cy="54" r="10"/>
+  </g>
+  <g fill="#001158">
+    <circle cx="19" cy="13" r="3"/>
+    <circle cx="53" cy="30" r="3"/>
+    <circle cx="19" cy="54" r="3"/>
+  </g>
+
+  <path d="M76 12V58" stroke="#BE4500" stroke-width="2"/>
+  <text x="88" y="39" direction="ltr" fill="#001158" font-family="Forma DJR Micro, Montserrat, Arial, sans-serif" font-size="36" font-weight="700">PART</text>
+  <text x="90" y="56" direction="ltr" fill="#001158" font-family="Forma DJR Micro, Montserrat, Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="0.65">ARGUMENTATION PUZZLES</text>
+</svg>
