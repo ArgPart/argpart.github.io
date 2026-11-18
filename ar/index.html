@@ -71,6 +71,102 @@
       .dates-table th, .dates-table td { padding: 0.6rem 0.5rem; font-size: 0.82rem; }
       .dates-table td:first-child, .dates-table th:first-child { min-width: 7rem; }
     }
+
+    /* Arabic page mobile layout: do not change the shared English stylesheet. */
+    .mobile-language { display: none; }
+    /* Avoid the large horizontal scroll area created by the global skip-link offset in RTL. */
+    .skip-link { left: auto; right: 0; transform: translateY(-150%); }
+    .skip-link:focus { left: auto; transform: translateY(0); }
+    @media (max-width: 720px) {
+      :root { --space-section: 2.2rem; }
+      body { line-height: 1.72; }
+      .site-header { position: static; }
+      .header-inner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.15rem 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0;
+      }
+      .brand img { height: 38px; }
+      .mobile-language {
+        display: inline-flex;
+        align-items: center;
+        font-family: "Forma DJR Micro", Montserrat, Arial, sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--blue);
+        border: 1px solid var(--line);
+        padding: 0.24rem 0.6rem;
+        border-radius: 2px;
+      }
+      .site-nav {
+        width: 100%;
+        flex: 0 0 100%;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        padding: 0.1rem 0 0.45rem;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: thin;
+        font-size: 0.79rem;
+        white-space: nowrap;
+      }
+      .site-nav a { flex: 0 0 auto; padding: 0.25rem 0; }
+      .site-nav .language-link { display: none; }
+      .hero { padding-top: 1.4rem; padding-bottom: 1.7rem; }
+      .kicker { font-size: 0.76rem; margin-bottom: 0.75rem; }
+      .hero h1 {
+        font-size: clamp(1.65rem, 7.4vw, 1.9rem);
+        line-height: 1.45;
+        margin-bottom: 0.4rem;
+      }
+      .lede { font-size: 1rem; line-height: 1.79; }
+      .official-notice {
+        margin: 1.05rem 0 1.1rem;
+        padding: 0.85rem 1rem;
+        line-height: 1.75;
+        font-size: 0.94rem;
+      }
+      .official-notice h2 { font-size: 1.06rem; line-height: 1.6; }
+      .cta-row { gap: 0.55rem; margin-top: 1rem; }
+      .cta-row .btn {
+        padding: 0.68rem 0.9rem;
+        text-align: right;
+        justify-content: flex-start;
+        font-size: 0.88rem;
+      }
+      .btn-label small { font-size: 0.7rem; }
+      h2 { font-size: 1.43rem; margin-bottom: 1.05em; }
+      .subtask-grid { gap: 0.8rem; margin: 1rem 0; }
+      .subtask-card { padding: 1rem 1.1rem; }
+      .example-box { padding: 1rem 1.15rem; }
+      .rtl-steps { padding-right: 1.35rem; }
+      .dates-table { border-collapse: collapse; }
+      .dates-table thead { display: none; }
+      .dates-table, .dates-table tbody, .dates-table tr, .dates-table td { display: block; width: 100%; }
+      .dates-table tbody tr {
+        padding: 0.7rem 0.85rem;
+        border-bottom: 1px solid var(--line);
+      }
+      .dates-table td, .dates-table td:first-child {
+        min-width: 0;
+        width: 100%;
+        white-space: normal;
+        border: 0;
+        padding: 0;
+        text-align: right;
+      }
+      .dates-table td:first-child { font-size: 0.78rem; color: var(--orange); font-weight: 700; margin-bottom: 0.15rem; }
+      .dates-table td:last-child { font-size: 0.94rem; }
+      .dates-table .dates-final { border-right: 3px solid var(--orange); }
+      .dates-table .dates-final td { border-top: 0; }
+      .footer-inner { gap: 0.75rem; }
+      .footer-nav { flex-direction: row; flex-wrap: wrap; gap: 0.35rem 1rem; }
+    }
   </style>
 </head>
 <body>
@@ -81,6 +177,7 @@
       <a class="brand" href="../index.html" aria-label="العودة إلى موقع PART الرسمي بالإنجليزية">
         <img src="../assets/part-logo.svg" alt="PART — ألغاز الحجاج" width="242" height="70">
       </a>
+      <a class="mobile-language" href="../index.html" lang="en" dir="ltr" aria-label="Read the English page">English</a>
       <nav class="site-nav" aria-label="القائمة الرئيسية">
         <a href="#task">عن المهمة</a>
         <a href="#arabic">النسخة العربية</a>
