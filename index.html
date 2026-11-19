@@ -91,7 +91,7 @@
         </a>
         <!-- On Dec 7, 2026: point this back to https://huggingface.co/datasets/michiel/argpart and set the badge to "Available now" -->
         <a class="btn btn-outline" href="#dates">
-          <span class="btn-label">Test data <small>Hugging Face &middot; 1,000 samples</small></span>
+          <span class="btn-label">Test data <small>Hugging Face &middot; 3 sets &times; 1,000 samples</small></span>
           <span class="btn-badge">Dec 7, 2026</span>
         </a>
         <a class="btn btn-outline" href="#submission">
@@ -297,14 +297,24 @@
         statements, witness names, irrelevant information, and prompt
         configurations may be expected to ensure generalizability.
       </p>
+      <h3>Test sets<span class="updated-flag">updated</span></h3>
       <p>
-        <strong>Note on distribution:</strong> the test set may differ in distribution
+        The test data will consist of <strong>three sets of increasing
+        difficulty</strong>, each containing <strong>1,000 samples</strong>:
+      </p>
+      <ul class="restrictions">
+        <li><strong>Test set 1:</strong> drawn from the same distribution as the training set.</li>
+        <li><strong>Test set 2:</strong> slightly more difficult than the training set. The final ranking is most likely to be based on this set.</li>
+        <li><strong>Test set 3:</strong> features extreme variation from the training distribution.</li>
+      </ul>
+      <p>
+        <strong>Note on distribution:</strong> the latter two test sets differ in distribution
         from the training set. Specifically, expect shifts in the number of nodes and
         shapes of the underlying argumentation graphs, the order in which witness
         testimonies are presented (in order or shuffled), the presence of irrelevant
         testimonies, the types of attack relations, the statements and witness names,
-        and the prompt configurations. Teams should not assume that test puzzles
-        follow the same distribution as the training data.
+        and the prompt configurations. Teams should not assume that the puzzles in
+        test sets 2 and 3 follow the same distribution as the training data.
       </p>
 
       <div class="fact-grid">
@@ -313,7 +323,7 @@
           <span class="fact-label">training samples</span>
         </div>
         <div class="fact">
-          <span class="fact-num">1,000</span>
+          <span class="fact-num">3 &times; 1,000<span class="updated-flag">updated</span></span>
           <span class="fact-label">test samples</span>
         </div>
         <div class="fact">
@@ -368,7 +378,7 @@
         <li><code>binary</code> (Task 1): your answer to the binary prompt, either <code>"yes"</code> or <code>"no"</code>.</li>
         <li><code>multi_label</code> (Task 2): a list of the names of all witnesses who can be believed, spelled as in the prompt. Order and capitalization do not matter.</li>
         <li>If you only take part in one subtask, leave the other field out. If a file contains both fields, it counts as one run for each subtask.</li>
-        <li>Include every test item. A missing answer counts as wrong, and a file with unknown or duplicate ids is rejected.</li>
+        <li>Include all test items (1000 items x 3 sets) in a single file. A missing answer counts as wrong, and a file with unknown or duplicate ids is rejected.</li>
       </ul>
     </div>
   </section>
@@ -392,7 +402,9 @@
       <p>
         Evaluation is run <strong>offline</strong> on the predictions teams
         <a href="#submission">email to argpart2027@gmail.com</a>. Alongside the evaluation of the
-        teams, the organizers will also run simplistic baselines.
+        teams, the organizers will also run simplistic baselines. The final ranking is
+        most likely to be based on <strong>test set 2</strong> (the slightly more difficult
+        set); results on all three sets will be reported.<span class="updated-flag">updated</span>
       </p>
       <h3 id="papers">System description papers</h3>
       <p>
