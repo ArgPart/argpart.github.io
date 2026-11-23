@@ -192,6 +192,16 @@ img { max-width: 100%; height: auto; display: block; }
   transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
+/* Hero buttons: one row of equal-width buttons, badge under the label */
+.cta-row .btn {
+  flex: 1 1 0;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
 .btn-label { display: flex; flex-direction: column; }
 .btn-label small {
   font-size: 0.72rem;
@@ -206,6 +216,20 @@ img { max-width: 100%; height: auto; display: block; }
 
 .btn-outline { background: #fff; color: var(--blue); }
 .btn-outline:hover { background: var(--blue); color: #fff; }
+
+.btn-signup { background: var(--orange); border-color: var(--orange); color: #fff; }
+.btn-signup:hover { background: #993700; border-color: #993700; color: #fff; }
+.btn-signup .btn-badge { background: #fff; color: var(--orange); }
+
+.site-nav a.nav-signup {
+  color: #fff;
+  background: var(--orange);
+  padding: 0.35em 0.8em;
+  border-radius: 999px;
+  border-bottom: 0;
+  font-weight: 700;
+}
+.site-nav a.nav-signup:hover { background: #993700; color: #fff; }
 
 .btn-badge {
   font-size: 0.68rem;
@@ -576,7 +600,7 @@ code {
 
   .example { grid-template-columns: 1fr; }
 
-  .cta-row .btn { width: 100%; justify-content: center; }
+  .cta-row .btn { flex-basis: 100%; }
 }
 
 /* ---------- print ---------- */
